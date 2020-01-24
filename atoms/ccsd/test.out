@@ -1,0 +1,7 @@
+cp: cannot stat ‘/zfs1/ghutchison/geoffh/Conf/sdf/atoms/ccsd/*.xyz’: No such file or directory
+[file orca_mdci/mdci_def.cpp, line 2990]: Error (ORCA_MDCI): Number of processes in parallel calculation exceeds number of pairs
+
+[file orca_tools/qcmsg.cpp, line 432]: 
+  .... aborting the run
+
+cp: cannot stat ‘/scratch/slurm-1426468/*.hess’: No such file or directory

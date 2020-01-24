@@ -1,0 +1,168 @@
+ *******************************************************************************
+ ** Site#: 6541         For non-commercial use only    Version 17.173M 64BITS **
+ *******************************************************************************
+ ** Cite this program as: MOPAC2016, Version: 17.173M, James J. P. Stewart,   **
+ ** Stewart Computational Chemistry, web: HTTP://OpenMOPAC.net. Days left: 130**
+ *******************************************************************************
+ **                                                                           **
+ **                                MOPAC2016                                  **
+ **                                                                           **
+ *******************************************************************************
+
+                              PM7 CALCULATION RESULTS
+
+
+ *******************************************************************************
+ *  CALCULATION DONE:                                Mon Feb 12 15:11:27 2018  *
+ *  PM7        - The PM7 Hamiltonian to be used
+ *  DOUBLET    - SPIN STATE DEFINED AS A DOUBLET
+ *  T=         - A TIME OF 172800.0 SECONDS REQUESTED
+ *  DUMP=N     - RESTART FILE WRITTEN EVERY  7200.000 SECONDS
+ *******************************************************************************
+ PM7 DOUBLET
+ atom
+
+   ATOM   CHEMICAL          X               Y               Z
+  NUMBER   SYMBOL      (ANGSTROMS)     (ANGSTROMS)     (ANGSTROMS)
+ 
+     1      Cl          0.00000000  *   0.00000000  *   0.00000000  *
+ 
+
+
+          CARTESIAN COORDINATES 
+
+    NO.       ATOM         X         Y         Z
+
+     1        Cl        0.0000    0.0000    0.0000
+
+ General Reference for PM7:
+ "Optimization of Parameters for Semiempirical Methods VI: More Modifications to the 
+ NDDO Approximations and Re-optimization of Parameters", J. J. P. Stewart, J. Mol. Mod., 1:32, 19 (2013)
+ http://www.springerlink.com/openurl.asp?genre=article&id=doi:10.1007/s00894-012-1667-x
+
+           Empirical Formula: Cl  =     1 atoms
+
+
+
+      MOLECULAR POINT GROUP   :   R3  
+
+
+ DOUBLET STATE CALCULATION
+
+
+          UHF CALCULATION, NO. OF ALPHA ELECTRONS =    4
+                           NO. OF BETA  ELECTRONS =    3
+
+          Geometry optimization using EF
+
+     GRADIENT =  0.00000  IS LESS THAN CUTOFF =  1.00000
+
+
+
+ -------------------------------------------------------------------------------
+ PM7 DOUBLET
+ atom
+
+
+
+     GRADIENTS WERE INITIALLY ACCEPTABLY SMALL                
+     SCF FIELD WAS ACHIEVED                                   
+
+
+                              PM7 CALCULATION
+                                                       MOPAC2016 (Version: 17.173M)
+                                                       Mon Feb 12 15:11:27 2018
+                                                       No. of days remaining = 130
+
+
+
+
+          FINAL HEAT OF FORMATION =         28.79094 KCAL/MOL =     120.46131 KJ/MOL
+
+
+          TOTAL ENERGY            =       -265.24998 EV
+          ELECTRONIC ENERGY       =       -265.24998 EV  POINT GROUP:     R3  
+          CORE-CORE REPULSION     =          0.00000 EV
+          COSMO AREA              =         52.81 SQUARE ANGSTROMS
+          COSMO VOLUME            =         36.09 CUBIC ANGSTROMS
+
+          IONIZATION POTENTIAL    =         11.614027 EV
+          ALPHA SOMO LUMO (EV)    =        -11.832 67.785
+          BETA  SOMO LUMO (EV)    =        -11.614 -3.835
+          NO. OF ALPHA ELECTRONS  =          4
+          NO. OF BETA  ELECTRONS  =          3
+          MOLECULAR WEIGHT        =         35.4530
+
+
+          SCF CALCULATIONS        =          1
+ 
+          WALL-CLOCK TIME         =          0.102 SECONDS
+          COMPUTATION TIME        =          0.009 SECONDS
+
+
+
+
+   ATOM   CHEMICAL          X               Y               Z
+  NUMBER   SYMBOL      (ANGSTROMS)     (ANGSTROMS)     (ANGSTROMS)
+ 
+     1      Cl          0.00000000  *   0.00000000  *   0.00000000  *
+
+                             CARTESIAN COORDINATES
+
+   1   Cl        0.000000000     0.000000000     0.000000000
+
+
+           Empirical Formula: Cl  =     1 atoms
+
+
+
+      MOLECULAR POINT GROUP   :   R3  
+
+
+          ALPHA EIGENVALUES  
+ -27.14834 -12.32554 -11.83201 -11.83201  67.78468  68.02269  68.02269  68.74371
+  68.74371
+
+
+           BETA EIGENVALUES 
+ -22.15132 -11.61403 -11.61403  -3.83454  68.69349  68.72122  68.72122  68.81713
+  68.81713
+
+
+              NET ATOMIC CHARGES AND DIPOLE CONTRIBUTIONS
+
+  ATOM NO.   TYPE          CHARGE      No. of ELECS.   s-Pop       p-Pop       d-Pop       
+    1         Cl          -0.000000        7.0000     1.99988     5.00000     0.00012
+ DIPOLE           X         Y         Z       TOTAL
+ POINT-CHG.     0.000     0.000     0.000     0.000
+ HYBRID         0.000    -0.000    -0.000     0.000
+ SUM            0.000    -0.000    -0.000     0.000
+
+
+          ATOMIC ORBITAL ELECTRON POPULATIONS
+
+     Atom    s        px        py        pz      x^2-y^2     xz        z^2       yz        xy
+    1 Cl   1.99988   2.00000   2.00000   1.00000   0.00000   0.00000   0.00012   0.00000   0.00000
+
+
+                    (SZ)    =    0.500000
+                    (S**2)  =    0.750226
+
+
+          ATOMIC ORBITAL SPIN POPULATIONS
+
+    Atom   Total    s     px     py     pz   x^2-y^2  xz     z^2    yz     xy
+         Atomic
+    1 Cl  1.0000  0.000  0.000  0.000  1.000 -0.000  0.000 -0.000 -0.000  0.000
+
+ **********************
+ *                    *
+ * JOB ENDED NORMALLY *
+ *                    *
+ **********************
+
+
+
+ TOTAL JOB TIME:             0.10 SECONDS
+
+ == MOPAC DONE ==

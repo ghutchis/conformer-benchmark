@@ -1,0 +1,168 @@
+ *******************************************************************************
+ ** Site#: 6541         For non-commercial use only    Version 17.173M 64BITS **
+ *******************************************************************************
+ ** Cite this program as: MOPAC2016, Version: 17.173M, James J. P. Stewart,   **
+ ** Stewart Computational Chemistry, web: HTTP://OpenMOPAC.net. Days left: 130**
+ *******************************************************************************
+ **                                                                           **
+ **                                MOPAC2016                                  **
+ **                                                                           **
+ *******************************************************************************
+
+                              PM7 CALCULATION RESULTS
+
+
+ *******************************************************************************
+ *  CALCULATION DONE:                                Mon Feb 12 15:11:29 2018  *
+ *  PM7        - The PM7 Hamiltonian to be used
+ *  DOUBLET    - SPIN STATE DEFINED AS A DOUBLET
+ *  T=         - A TIME OF 172800.0 SECONDS REQUESTED
+ *  DUMP=N     - RESTART FILE WRITTEN EVERY  7200.000 SECONDS
+ *******************************************************************************
+ PM7 DOUBLET
+ atom
+
+   ATOM   CHEMICAL          X               Y               Z
+  NUMBER   SYMBOL      (ANGSTROMS)     (ANGSTROMS)     (ANGSTROMS)
+ 
+     1       I          0.00000000  *   0.00000000  *   0.00000000  *
+ 
+
+
+          CARTESIAN COORDINATES 
+
+    NO.       ATOM         X         Y         Z
+
+     1         I        0.0000    0.0000    0.0000
+
+ General Reference for PM7:
+ "Optimization of Parameters for Semiempirical Methods VI: More Modifications to the 
+ NDDO Approximations and Re-optimization of Parameters", J. J. P. Stewart, J. Mol. Mod., 1:32, 19 (2013)
+ http://www.springerlink.com/openurl.asp?genre=article&id=doi:10.1007/s00894-012-1667-x
+
+           Empirical Formula: I  =     1 atoms
+
+
+
+      MOLECULAR POINT GROUP   :   R3  
+
+
+ DOUBLET STATE CALCULATION
+
+
+          UHF CALCULATION, NO. OF ALPHA ELECTRONS =    4
+                           NO. OF BETA  ELECTRONS =    3
+
+          Geometry optimization using EF
+
+     GRADIENT =  0.00000  IS LESS THAN CUTOFF =  1.00000
+
+
+
+ -------------------------------------------------------------------------------
+ PM7 DOUBLET
+ atom
+
+
+
+     GRADIENTS WERE INITIALLY ACCEPTABLY SMALL                
+     SCF FIELD WAS ACHIEVED                                   
+
+
+                              PM7 CALCULATION
+                                                       MOPAC2016 (Version: 17.173M)
+                                                       Mon Feb 12 15:11:29 2018
+                                                       No. of days remaining = 130
+
+
+
+
+          FINAL HEAT OF FORMATION =         24.04094 KCAL/MOL =     100.58727 KJ/MOL
+
+
+          TOTAL ENERGY            =       -222.90791 EV
+          ELECTRONIC ENERGY       =       -222.90791 EV  POINT GROUP:     R3  
+          CORE-CORE REPULSION     =          0.00000 EV
+          COSMO AREA              =         67.64 SQUARE ANGSTROMS
+          COSMO VOLUME            =         52.31 CUBIC ANGSTROMS
+
+          IONIZATION POTENTIAL    =          9.262280 EV
+          ALPHA SOMO LUMO (EV)    =         -9.262119.943
+          BETA  SOMO LUMO (EV)    =         -9.387 -3.537
+          NO. OF ALPHA ELECTRONS  =          4
+          NO. OF BETA  ELECTRONS  =          3
+          MOLECULAR WEIGHT        =        126.9045
+
+
+          SCF CALCULATIONS        =          1
+ 
+          WALL-CLOCK TIME         =          0.012 SECONDS
+          COMPUTATION TIME        =          0.010 SECONDS
+
+
+
+
+   ATOM   CHEMICAL          X               Y               Z
+  NUMBER   SYMBOL      (ANGSTROMS)     (ANGSTROMS)     (ANGSTROMS)
+ 
+     1       I          0.00000000  *   0.00000000  *   0.00000000  *
+
+                             CARTESIAN COORDINATES
+
+   1    I        0.000000000     0.000000000     0.000000000
+
+
+           Empirical Formula: I  =     1 atoms
+
+
+
+      MOLECULAR POINT GROUP   :   R3  
+
+
+          ALPHA EIGENVALUES  
+ -22.86656  -9.45891  -9.26228  -9.26228 119.94274 120.53096 120.53096 122.38431
+ 122.38431
+
+
+           BETA EIGENVALUES 
+ -20.18537  -9.38687  -9.38687  -3.53671 122.81830 122.81830 124.06246 124.06246
+ 124.51347
+
+
+              NET ATOMIC CHARGES AND DIPOLE CONTRIBUTIONS
+
+  ATOM NO.   TYPE          CHARGE      No. of ELECS.   s-Pop       p-Pop       d-Pop       
+    1          I          -0.000000        7.0000     1.99948     5.00000     0.00052
+ DIPOLE           X         Y         Z       TOTAL
+ POINT-CHG.     0.000     0.000     0.000     0.000
+ HYBRID        -0.000     0.000    -0.000     0.000
+ SUM           -0.000     0.000    -0.000     0.000
+
+
+          ATOMIC ORBITAL ELECTRON POPULATIONS
+
+     Atom    s        px        py        pz      x^2-y^2     xz        z^2       yz        xy
+    1  I   1.99948   2.00000   2.00000   1.00000   0.00000   0.00000   0.00052   0.00000   0.00000
+
+
+                    (SZ)    =    0.500000
+                    (S**2)  =    0.751030
+
+
+          ATOMIC ORBITAL SPIN POPULATIONS
+
+    Atom   Total    s     px     py     pz   x^2-y^2  xz     z^2    yz     xy
+         Atomic
+    1  I  1.0000  0.000 -0.000 -0.000  1.000  0.000 -0.000 -0.000  0.000  0.000
+
+ **********************
+ *                    *
+ * JOB ENDED NORMALLY *
+ *                    *
+ **********************
+
+
+
+ TOTAL JOB TIME:             0.01 SECONDS
+
+ == MOPAC DONE ==

@@ -1,0 +1,217 @@
+      -----------------------------------------------------------      
+     |                   =====================                   |     
+     |                           x T B                           |     
+     |                   =====================                   |     
+     |                         S. Grimme                         |     
+     |          Mulliken Center for Theoretical Chemistry        |     
+     |                    University of Bonn                     |     
+     |                Version 6.2 RC2 (SAW190805)                |     
+      -----------------------------------------------------------      
+
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+   
+   FOR NON-COMMERCIAL, ACADEMIA USE ONLY.
+   
+   Cite this work as:
+   * S. Grimme, C. Bannwarth, P. Shushkov, J. Chem. Theory Comput., 2017,
+     13, 1989-2009. DOI: 10.1021/acs.jctc.7b00118
+   * C. Bannwarth, S. Ehlert and S. Grimme., J. Chem. Theory Comput., 2019,
+     15, 1652-1671. DOI: 10.1021/acs.jctc.8b01176
+   * P. Pracht, E. Caldeweyher, S. Ehlert, S. Grimme, ChemRxiv, 2019, preprint.
+     DOI: 10.26434/chemrxiv.8326202.v1
+   
+   for DFT-D4:
+   * E. Caldeweyher, C. Bannwarth and S. Grimme, J. Chem. Phys., 2017,
+     147, 034112. DOI: 10.1063/1.4993215
+   * E. Caldeweyher, S. Ehlert, A. Hansen, H. Neugebauer, S. Spicher,
+     C. Bannwarth and S. Grimme, J. Chem. Phys., 2019, 150, 154122.
+     DOI: 10.1063/1.5090222
+   
+   for sTDA-xTB:
+   * S. Grimme and C. Bannwarth, J. Chem. Phys., 2016, 145, 054103.
+     DOI: 10.1063/1.4959605
+   
+   in the mass-spec context:
+   * V. Asgeirsson, C. Bauer and S. Grimme, Chem. Sci., 2017, 8, 4879.
+     DOI: 10.1039/c7sc00601b
+   
+   for metadynamics refer to:
+   * S. Grimme, J. Chem. Theory Comput., 2019, 155, 2847-2862
+     DOI: 10.1021/acs.jctc.9b00143
+   
+   with help from (in alphabetical order)
+   C. Bannwarth, F. Bohle, G. Brandenburg, E. Caldeweyher, M. Checinski,
+   S. Dohm, S. Ehlert, S. Ehrlich, F. März, H. Neugebauer, J. Pisarek,
+   P. Pracht, P. Shushkov, and S. Spicher.
+   
+ * started run on 2019/08/12 at 13:31:26.453     
+
+           -------------------------------------------------
+          |                Calculation Setup                |
+           -------------------------------------------------
+
+          program call               : xtb -sp -gfn 0 -uhf 2 C.xyz
+          hostname                   : login0.crc.pitt.edu
+          coordinate file            : C.xyz
+          omp threads                :                    12
+          number of atoms            :                     1
+          number of electrons        :                     4
+          charge                     :                     0
+          spin                       :                   1.0
+          first test random number   :      0.10309660051168
+
+
+########################################################################
+# WARNING! Please study the warnings concerning your input carefully
+#  - the use of '-sp' is discouraged, please use '--sp' next time
+#  - the use of '-gfn' is discouraged, please use '--gfn' next time
+#  - the use of '-uhf' is discouraged, please use '--uhf' next time
+########################################################################
+
+           ------------------------------------------------- 
+          |                 G F N 0 - x T B                 |
+          | Geometry, Frequencies, Noncovalent interactions |
+          |           preliminary parametrisation           |
+           ------------------------------------------------- 
+             KAB for M(3d)-M(3d)    :  1.1000
+             KAB for M(4d)-M(4d)    :  1.1000
+             KAB for M(5d)-M(5d)    :  1.1000
+             KAB for M-M (group XI) :  0.9000
+             k(s)             :                2.0000
+             k(p)             :                2.4868
+             k(d)             :                2.2700
+             k(f)             :                0.6000
+             kEN (H0ij)       :               -0.2000
+             D3 a1            :                0.8000
+             D3 a2            :                4.6000
+             D3 s6            :                1.0000
+             D3 s8            :                2.8500
+             D3 s9            :                0.0000
+             alphaj           :                1.1241
+             ken⁴             :                4.0000
+             rep dEN          :               -0.0900
+             k(dz)            :                0.0000
+             SRB shift        :                0.0537
+             SRB prefact.     :               -0.0129
+             SRB slope        :                3.4847
+
+  Z AO/shell   Hii/eV     exponent
+  6     Fri Nov 30 20:58:37 CET 2018    EN: 2.480 GAM: 0.031  GM3: 0.0909
+     2s    -15.754585    1.991584
+     2p     -9.797536    1.784535
+
+           ------------------------------------------------- 
+          |        Valence Tight Binding Calculation        |
+           ------------------------------------------------- 
+
+          ...................................................
+          :                      SETUP                      :
+          :.................................................:
+          :  # basis functions                   4          :
+          :  # atomic orbitals                   4          :
+          :  # shells                            2          :
+          :  # electrons                         4          :
+          :  electronic temp.          300.0000000     K    :
+          :  accuracy                    1.0000000          :
+          :  -> integral cutoff          0.2500000E+02      :
+          :  -> integral neglect         0.1000000E-07      :
+          ...................................................
+  Checking positiv definite overlap ...  done.
+ 
+
+         #    Occupation            Energy/Eh            Energy/eV
+      -------------------------------------------------------------
+         1        2.0000           -0.5789704             -15.7546
+         2        0.6667           -0.3600528              -9.7975
+         3        0.6667           -0.3600528              -9.7975 (HOMO)
+         4        0.6667           -0.3600528              -9.7975 (LUMO)
+      -------------------------------------------------------------
+                  HL-Gap            0.0000000 Eh            0.0000 eV
+             Fermi-level            0.0000000 Eh            0.0000 eV
+
+ EHT (total)                   0 d,  0 h,  0 min,  0.002 sec
+ EHT setup                      ...        0 min,  0.000 sec (  3.547%)
+ Coordination number            ...        0 min,  0.000 sec (  1.325%)
+ EEQ model density              ...        0 min,  0.000 sec (  1.578%)
+ D4 Dispersion                  ...        0 min,  0.000 sec ( 12.975%)
+ Integral evaluation            ...        0 min,  0.000 sec (  1.792%)
+ Cholesky factorization         ...        0 min,  0.000 sec (  1.805%)
+ Zeroth order Hamiltonian       ...        0 min,  0.001 sec ( 64.748%)
+ Gradient calculation           ...        0 min,  0.000 sec (  4.973%)
+
+         :::::::::::::::::::::::::::::::::::::::::::::::::::::
+         ::                     SUMMARY                     ::
+         :::::::::::::::::::::::::::::::::::::::::::::::::::::
+         :: total energy              -1.879860475670 Eh    ::
+         :: gradient norm              0.000000000000 Eh/a0 ::
+         :: HOMO-LUMO gap              0.000000000000 eV    ::
+         ::.................................................::
+         :: H0 energy                 -1.879860475670 Eh    ::
+         :: repulsion energy           0.000000000000 Eh    ::
+         :: electrostat energy         0.000000000000 Eh    ::
+         :: -> Gsolv                   0.000000000000 Eh    ::
+         ::    -> Gsasa                0.000000000000 Eh    ::
+         ::    -> Gshift               0.000000000000 Eh    ::
+         :: dispersion energy          0.000000000000 Eh    ::
+         :: short-range corr.          0.000000000000 Eh    ::
+         :: add. restraining           0.000000000000 Eh    ::
+         :::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+           -------------------------------------------------
+          |                Property Printout                |
+           -------------------------------------------------
+
+    * Orbital Energies and Occupations
+
+         #    Occupation            Energy/Eh            Energy/eV
+      -------------------------------------------------------------
+         1        2.0000           -0.5789704             -15.7546
+         2        0.6667           -0.3600528              -9.7975
+         3        0.6667           -0.3600528              -9.7975 (HOMO)
+         4        0.6667           -0.3600528              -9.7975 (LUMO)
+      -------------------------------------------------------------
+                  HL-Gap            0.0000000 Eh            0.0000 eV
+             Fermi-level            0.0000000 Eh            0.0000 eV
+
+     #   Z        covCN         q      C6AA      α(0)
+     1   6 C      0.000     0.000    49.284    12.338
+
+ Mol. C6AA /au·bohr⁶  :         49.283918
+ Mol. C8AA /au·bohr⁸  :       1425.376545
+ Mol. α(0) /au        :         12.338364
+
+(R)spin-density population
+
+ Mulliken population n(s)   n(p)   n(d)
+     1 C   2.0000   0.000  2.000  0.000
+
+Wiberg/Mayer (AO) data.
+largest (>0.10) Wiberg bond orders for each atom
+          total WBO             WBO to atom ...
+     1  C   0.000
+
+ dipole moment from electron density (au)
+     X       Y       Z   
+   0.0000   0.0000   0.0000  total (Debye):    0.000
+
+
+           -------------------------------------------------
+          | TOTAL ENERGY               -1.879860475670 Eh   |
+          | GRADIENT NORM               0.000000000000 Eh/α |
+          | HOMO-LUMO GAP               0.000000000000 eV   |
+           -------------------------------------------------
+
+------------------------------------------------------------------------
+ * finished run on 2019/08/12 at 13:31:26.472     
+------------------------------------------------------------------------
+ total:
+ * wall-time:     0 d,  0 h,  0 min,  0.019 sec
+ *  cpu-time:     0 d,  0 h,  0 min,  0.170 sec
+ * ratio c/w:     9.002 speedup
+ SCF:
+ * wall-time:     0 d,  0 h,  0 min,  0.002 sec
+ *  cpu-time:     0 d,  0 h,  0 min,  0.024 sec
+ * ratio c/w:    11.289 speedup
+
