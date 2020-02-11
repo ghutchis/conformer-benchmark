@@ -854,7 +854,7 @@ omegapdb_2j47 rmsd221-opt.out.bz2 FINAL SINGLE POINT ENERGY     -1255.5375959906
 omegapdb_2j47 rmsd52-opt.out.bz2 FINAL SINGLE POINT ENERGY     -1255.537834400663
 omegapdb_2j47 rmsd55-opt.out.bz2 FINAL SINGLE POINT ENERGY     -1255.538237790572
 omegapdb_2j47 rmsd8-opt.out.bz2 FINAL SINGLE POINT ENERGY     -1255.538252362817
-astex_1g9v rmsd111-opt.out.bz2 astex_1g9v rmsd116-opt.out.bz2 astex_1g9v rmsd117-opt.out.bz2 astex_1g9v rmsd147-opt.out.bz2 astex_1g9v rmsd152-opt.out.bz2 astex_1g9v rmsd176-opt.out.bz2 astex_1g9v rmsd203-opt.out.bz2 astex_1g9v rmsd209-opt.out.bz2 astex_1g9v rmsd232-opt.out.bz2 astex_1g9v rmsd75-opt.out.bz2 astex_1gkc rmsd144-opt.out.bz2 FINAL SINGLE POINT ENERGY     -1054.337870677943
+astex_1gkc rmsd144-opt.out.bz2 FINAL SINGLE POINT ENERGY     -1054.337870677943
 astex_1gkc rmsd193-opt.out.bz2 FINAL SINGLE POINT ENERGY     -1054.339300897411
 astex_1gkc rmsd209-opt.out.bz2 FINAL SINGLE POINT ENERGY     -1054.333190215123
 astex_1gkc rmsd216-opt.out.bz2 FINAL SINGLE POINT ENERGY     -1054.341429784088
@@ -1318,7 +1318,7 @@ astex_2bsm rmsd38-opt.out.bz2 FINAL SINGLE POINT ENERGY     -1660.338180491065
 astex_2bsm rmsd39-opt.out.bz2 FINAL SINGLE POINT ENERGY     -1660.338631175296
 astex_2bsm rmsd43-opt.out.bz2 FINAL SINGLE POINT ENERGY     -1660.338615179173
 omegacsd_ABHYTZ rmsd18-opt.out.bz2 FINAL SINGLE POINT ENERGY     -1150.926590696968
-omegacsd_ABHYTZ rmsd29-opt.out.bz2 omegacsd_ABHYTZ rmsd30-opt.out.bz2 FINAL SINGLE POINT ENERGY     -1150.927249081965
+omegacsd_ABHYTZ rmsd30-opt.out.bz2 FINAL SINGLE POINT ENERGY     -1150.927249081965
 omegacsd_ABHYTZ rmsd31-opt.out.bz2 FINAL SINGLE POINT ENERGY     -1150.927245811988
 omegacsd_ABHYTZ rmsd39-opt.out.bz2 FINAL SINGLE POINT ENERGY     -1150.926757688983
 omegacsd_ABHYTZ rmsd41-opt.out.bz2 FINAL SINGLE POINT ENERGY     -1150.926470955166
@@ -3807,7 +3807,7 @@ omegacsd_KECDUR rmsd22-opt.out.bz2 FINAL SINGLE POINT ENERGY     -1229.245889603
 omegacsd_KECDUR rmsd49-opt.out.bz2 FINAL SINGLE POINT ENERGY     -1229.248772973672
 omegacsd_KECDUR rmsd91-opt.out.bz2 FINAL SINGLE POINT ENERGY     -1229.246189980041
 omegacsd_KECDUR rmsd95-opt.out.bz2 FINAL SINGLE POINT ENERGY     -1229.248712826114
-omegacsd_KECDUR rmsd96-opt.out.bz2 omegacsd_KECDUR rmsd99-opt.out.bz2 FINAL SINGLE POINT ENERGY     -1229.246464854228
+omegacsd_KECDUR rmsd99-opt.out.bz2 FINAL SINGLE POINT ENERGY     -1229.246464854228
 omegacsd_KEJBEG rmsd111-opt.out.bz2 FINAL SINGLE POINT ENERGY     -1568.594914586412
 omegacsd_KEJBEG rmsd155-opt.out.bz2 FINAL SINGLE POINT ENERGY     -1568.598158445755
 omegacsd_KEJBEG rmsd182-opt.out.bz2 FINAL SINGLE POINT ENERGY     -1568.597912630142
@@ -5805,7 +5805,7 @@ omegapdb_1gse rmsd82-opt.out.bz2 FINAL SINGLE POINT ENERGY     -1405.30854210116
 omegapdb_1gse rmsd91-opt.out.bz2 FINAL SINGLE POINT ENERGY     -1405.309141352365
 omegapdb_1gz8 rmsd122-opt.out.bz2 FINAL SINGLE POINT ENERGY      -813.194281556534
 omegapdb_1gz8 rmsd151-opt.out.bz2 FINAL SINGLE POINT ENERGY      -813.193940513361
-omegapdb_1gz8 rmsd165-opt.out.bz2 omegapdb_1gz8 rmsd166-opt.out.bz2 FINAL SINGLE POINT ENERGY      -813.194671945506
+omegapdb_1gz8 rmsd166-opt.out.bz2 FINAL SINGLE POINT ENERGY      -813.194671945506
 omegapdb_1gz8 rmsd171-opt.out.bz2 FINAL SINGLE POINT ENERGY      -813.193840337029
 omegapdb_1gz8 rmsd176-opt.out.bz2 FINAL SINGLE POINT ENERGY      -813.194456456258
 omegapdb_1gz8 rmsd180-opt.out.bz2 FINAL SINGLE POINT ENERGY      -813.194671487226

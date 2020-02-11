@@ -214,7 +214,7 @@ uffTime = open("timing/uff-time.csv", 'w')
 gaffTime = open("timing/gaff-time.csv", 'w')
 
 # okay, now we use pybel to open and parse the .mol files
-print("name,geom,natoms,dlpno,mp2,wb97,b973c,pbe,pbeSVP,pbeh3c,b3lypTZ,b3lypSVP,gfn0,gfn1,gfn2,pm7E,pm7HOF,mmff,mmffNew,uff,gaff,ani1x,ani1cc,ani2")
+print("name,geom,natoms,dlpno,mp2,wb97,b973c,pbe,pbeSVP,pbeh3c,b3lypTZ,b3lypSVP,gfn0,gfn1,gfn2,pm7E,pm7HOF,mmff,uff,gaff,ani1x,ani1cc,ani2")
 for filename in glob.iglob("/Users/ghutchis/conf/*_jobs/*/*.mol"):
     name = filename.split('/')[-2]
     geom = filename.split('/')[-1]
