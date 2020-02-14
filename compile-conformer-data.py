@@ -6,9 +6,10 @@ import sys, os
 import glob
 import time
 
-import pybel
+# uses open babel 3.0
+from openbabel import pybel
 mmff = pybel._forcefields["mmff94"]
-mmffS = pybel._forcefields["mmff94s"]
+mmffS = pybel._forcefields["mmff94s"] # unused
 uff = pybel._forcefields["uff"]
 gaff = pybel._forcefields["gaff"]
 
@@ -17,6 +18,7 @@ import atomization
 
 hartree_to_kcal = 627.509469
 eV_to_kcal = 23.06035
+kj_to_kcal = 1.0 / 4.184
 
 def is_number(s):
     try:
@@ -215,7 +217,7 @@ gaffTime = open("timing/gaff-time.csv", 'w')
 
 # okay, now we use pybel to open and parse the .mol files
 print("name,geom,natoms,dlpno,mp2,wb97,b973c,pbe,pbeSVP,pbeh3c,b3lypTZ,b3lypSVP,gfn0,gfn1,gfn2,pm7E,pm7HOF,mmff,uff,gaff,ani1x,ani1cc,ani2")
-for filename in glob.iglob("/Users/ghutchis/conf/*_jobs/*/*.mol"):
+for filename in glob.iglob("geometries/*_jobs/*/*opt.mol"):
     name = filename.split('/')[-2]
     geom = filename.split('/')[-1]
 
@@ -312,13 +314,13 @@ for filename in glob.iglob("/Users/ghutchis/conf/*_jobs/*/*.mol"):
 
     t0 = time.perf_counter()
     uff.Setup(mol.OBMol)
-    uffE = uff.Energy()
+    uffE = uff.Energy() * kj_to_kcal
     t1 = time.perf_counter()
     print(name, geom, t1-t0, sep=',', file=uffTime)
 
     t0 = time.perf_counter()
     gaff.Setup(mol.OBMol)
-    gaffE = gaff.Energy()
+    gaffE = gaff.Energy() * kj_to_kcal
     t1 = time.perf_counter()
     print(name, geom, t1-t0, sep=',', file=gaffTime)
 
