@@ -1,0 +1,16 @@
+Method,Normalization, MARE,R^2,Spearman
+BOB,---,1.92,0.32,0.10
+BOB,Atoms,1.94,0.36,0.10
+BOB,Bonds,5.09,0.27,0.00
+BOB,Electrons,2.06,0.32,0.00
+BOB,Mass,2.20,0.32,0.10
+BAT,---,1.18,0.31,0.20
+BAT,Atoms,1.36,0.34,0.10
+BAT,Bonds,1.62,0.35,0.10
+BAT,Electrons,1.28,0.33,0.15
+BAT,Mass,1.40,0.31,0.20
+BATTY,---,0.51,0.40,0.40
+BATTY,Atoms,0.42,0.47,0.50
+BATTY,Bonds,0.42,0.48,0.50
+BATTY,Electrons,0.63,0.42,0.40
+BATTY,Mass,0.69,0.41,0.40
