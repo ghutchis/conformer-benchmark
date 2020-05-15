@@ -3,8 +3,6 @@
 Computing energies using TorchANI
 """
 
-###############################################################################
-# To begin with, let's first import the modules we will use:
 from __future__ import print_function
 
 import warnings
@@ -25,20 +23,19 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 #######
 # We're going to read in an XYZ file specified on the command-line
-coords = []
-self_energy = 0.0
-atoms = []
-if len(sys.argv) > 1:
-    with open(sys.argv[1]) as xyz_file:
-        num_atoms = int(xyz_file.readline().rstrip())
-        xyz_file.readline() # skip the smiles or title line
-        for i in range(num_atoms):
-            element, x, y, z = xyz_file.readline().split()
-            atoms.append(element)
-            coords.append([float(x),float(y),float(z)])
-            self_energy += atom_selfE[element]
-
-# optionally check for non-parameterized elements
+coord_sets = []
+if len(sys.argv) > 2:
+    for name in sys.argv[2:]:
+        with open(name) as xyz_file:
+            atoms = []
+            coords = []
+            num_atoms = int(xyz_file.readline().rstrip())
+            xyz_file.readline() # skip the smiles or title line
+            for i in range(num_atoms):
+                element, x, y, z = xyz_file.readline().split()
+                atoms.append(element)
+                coords.append([float(x),float(y),float(z)])
+            coord_sets.append(coords)
 
 ###############################################################################
 # Let's now load the built-in ANI-1 models. The builtin ANI-1ccx contains 8
@@ -48,12 +45,13 @@ if len(sys.argv) > 1:
 # issue in your application.
 
 # (not sure if these need the level shifters...)
-# ani1x = torchani.models.ANI1x()
-# ani1ccx = torchani.models.ANI1ccx()
+ani1x = torchani.models.ANI1x()
+ani1ccx = torchani.models.ANI1ccx()
 
-# this whole pile is to load ANI-2x (since it's not public yet)
 # path to ANI-2x subdirectories
 path = '/Users/ghutchis/Devel/torchani/torchani/resources/ani-2x'
+
+# this whole pile is to load ANI-2x (since it's not public)
 const_file = path + '/rHCNOSFCl-5.1R_16-3.5A_a8-4.params'  # noqa: E501
 consts = torchani.neurochem.Constants(const_file)
 aev_computer = torchani.AEVComputer(**consts)
@@ -61,8 +59,11 @@ sae_file = path + '/sae_linfit.dat'  # noqa: E501
 energy_shifter = torchani.neurochem.load_sae(sae_file)
 model_prefix = path + '/train'  # noqa: E501
 ensemble = torchani.neurochem.load_model_ensemble(consts.species, model_prefix, 8)  # noqa: E501
-model = torch.nn.Sequential(aev_computer, ensemble, energy_shifter)
+
+ani2x = torch.nn.Sequential(aev_computer, ensemble, energy_shifter)
 # done (that's ANI-2x)
+
+model = ani2x
 
 ###############################################################################
 # Now let's define the coordinate and species. If you just want to compute the
@@ -72,18 +73,15 @@ model = torch.nn.Sequential(aev_computer, ensemble, energy_shifter)
 # preceding ``1`` in the shape is here to support batch processing like in
 # training. If you have ``N`` different structures to compute, then make it
 # ``N``.
-start = timer()
-coordinates = torch.tensor([coords],
-                           requires_grad=False, device=device)
 species = consts.species_to_tensor(atoms).to(device).unsqueeze(0)
 
-###############################################################################
 # Now let's compute energy and force:
-_, energy = model((species, coordinates))
-#derivative = torch.autograd.grad(energy.sum(), coordinates)[0]
-#force = -derivative
-end = timer()
+for coords in coord_sets:
+    start = timer()
+    coordinates = torch.tensor([coords], requires_grad=False, device=device)
+    _, energy = model((species, coordinates))
+    end = timer()
 
-###############################################################################
-# And print to see the result:
-print(sys.argv[1], -627.509469*(energy.item()), end-start, sep=',' )
+    # Calculating an atomization energy from ANI was essentially impossible
+    # We're converting to kcal/mol and multiplying by -1.0 to get the right sign
+    print(sys.argv[1], -627.509469*(energy.item()), end-start, sep=',' )
